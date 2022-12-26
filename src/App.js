@@ -1,55 +1,22 @@
 import logo from "./logo.svg";
 import "./App.css";
 import "./style.css";
+import Nav from "./Nav";
 
 function App() {
-  const heading1="Taher's Learning Journey.";
+  const heading1 = "Taher's Learning Journey.";
 
-  const handleNameChange=()=>{
-const names=['taher','mukadam'];
-return names[0];
+  const handleNameChange = () => {
+    const names = ['taher', 'mukadam'];
+    return names[0];
+  }
+
+  const handleClick=(e)=>{
+    console.log(e.target.innerText);
   }
   return (
     <div className="App">
-      <nav className="navbar navbar-default navbar-fixed-top">
-        <div className="container">
-          <div className="navbar-header">
-            <button
-              type="button"
-              className="navbar-toggle"
-              data-toggle="collapse"
-              data-target="#myNavbar"
-            >
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-            </button>
-            <a className="navbar-brand" href="#myPage">
-              Logo
-            </a>
-          </div>
-          <div className="collapse navbar-collapse" id="myNavbar">
-            <ul className="nav navbar-nav navbar-right">
-              <li>
-                <a href="#about">ABOUT</a>
-              </li>
-              <li>
-                <a href="#services">SERVICES</a>
-              </li>
-              <li>
-                <a href="#portfolio">PORTFOLIO</a>
-              </li>
-              <li>
-                <a href="#pricing">PRICING</a>
-              </li>
-              <li>
-                <a href="#contact">CONTACT</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
+      <Nav />
       <div className="jumbotron text-center">
         <h1>Company</h1>
         <p>We specialize in blablabla</p>
@@ -64,7 +31,7 @@ return names[0];
             />
             <div className="input-group-btn">
               <button type="button" className="btn btn-danger">
-                Subscribe 
+                Subscribe
               </button>
             </div>
           </div>
@@ -95,7 +62,7 @@ return names[0];
               aliquip ex ea commodo consequat.
             </p>
             <br />
-            <button className="btn btn-default btn-lg">{handleNameChange()}</button>
+            <button onClick={(e)=>handleClick(e)} className="btn btn-default btn-lg">{handleNameChange()}</button>
           </div>
           <div className="col-sm-4">
             <span className="glyphicon glyphicon-signal logo"></span>
