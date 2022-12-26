@@ -3,6 +3,12 @@ import "./App.css";
 import "./style.css";
 
 function App() {
+  const heading1="Taher's Learning Journey.";
+
+  const handleNameChange=()=>{
+const names=['taher','mukadam'];
+return names[0];
+  }
   return (
     <div className="App">
       <nav className="navbar navbar-default navbar-fixed-top">
@@ -58,7 +64,7 @@ function App() {
             />
             <div className="input-group-btn">
               <button type="button" className="btn btn-danger">
-                Subscribe
+                Subscribe 
               </button>
             </div>
           </div>
@@ -68,7 +74,7 @@ function App() {
       <div id="about" className="container-fluid">
         <div className="row">
           <div className="col-sm-8">
-            <h2>About Company Page</h2>
+            <h2>{heading1}</h2>
             <br />
             <h4>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -89,7 +95,7 @@ function App() {
               aliquip ex ea commodo consequat.
             </p>
             <br />
-            <button className="btn btn-default btn-lg">Get in Touch</button>
+            <button className="btn btn-default btn-lg">{handleNameChange()}</button>
           </div>
           <div className="col-sm-4">
             <span className="glyphicon glyphicon-signal logo"></span>
